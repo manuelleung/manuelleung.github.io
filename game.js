@@ -1,20 +1,3 @@
-/*jslint browser: true*/
-/*global $, jQuery, alert*/
-
-/*
-ion.sound({ sounds: [ {name: "branch_break", volume: 0.5, preload: true}, {name: "bell_ring", volume: 0.8, preload: true}, {name: "metal_plate_2", volume: 0.7, preload: true}, {name: "glass", volume: 1.0, preload: true} ], volume: 1.0, path: "http://.com/sounds/", preload: true });
-$(document).ready(function () {
-    "use strict";
-    $("a").on("click", function () {
-        ion.sound.play("branch_break");
-        console.log("Play Sound");
-    });
-});
-*/
-
-/*** ALL QUIZ DATA IS STORED IN MULTI-DIMENSIONAL ARRAYS BELOW***/
-    
-        
 var MathQuiz = [ 
     ['Addition', 'add-1', ['210', '102', '12', '8'], 3], 
     ['Addition', 'add-2', ['6', '10', '16', '28'], 2], 
@@ -73,14 +56,10 @@ var MathQuiz = [
 var retry;
 var quizDataFull = [];
 var quizData;
-//var quizFullCount;
-
 var score;
 var round;
-
 var lastQuestion = 10;
 var currentQuestion;
-
 var pic;
 var answerA;
 var answerB;
@@ -88,17 +67,12 @@ var answerC;
 var answerD;
 var correctAnswer;
 var highScore = 0;
-
 var i;
 var IMG;
-
-
-
 var total;
 var type;
 var picTemp;
 
-/*** LAUNCHES THE GAME WITH NEW QUIZ DATA ***/
 function launch(quizName) {
     "use strict";
     retry = quizName;
@@ -107,17 +81,13 @@ function launch(quizName) {
     quizData = [];
     score = 0;
     round = 0;
-
-    //quizFullCount = quizDataFull.length;
-
-    // Shuffle the Quiz Deck
+    // shuffle quiz
     while (quizData.length < 10) {
         var addData = quizDataFull[Math.floor(Math.random() * quizDataFull.length)];
         if ((quizData.indexOf(addData)) == '-1') {
             quizData.push(addData);
         }
     }
-    //console.log(quizData);
     total = quizData.length * 10;
     /*jslint plusplus: true */
     for (i = 0; i < quizData.length; i++) {
@@ -126,7 +96,7 @@ function launch(quizName) {
         IMG.src = "css/images/" + picTemp + ".jpg";
         console.log("Image " + IMG.src + " Loaded");
     }
-    // Load the First Question Data
+    // load first question
     type = quizData[round][0];
     pic = quizData[round][1];
     answerA = quizData[round][2][0];
@@ -136,16 +106,16 @@ function launch(quizName) {
     correctAnswer = quizData[round][3];
     pic = "css/images/" + pic + ".jpg";
     
-    // Shuffle the Answers
+    // shuffle answers
     var $MultipleChoiceAnswers = $('#quizPopup #quizAnswers');
     $('div', $MultipleChoiceAnswers).sort(function () { return (Math.round(Math.random()) - 0.5); }).appendTo($MultipleChoiceAnswers);
 
-    // Grid the Answer Buttons
+    // grid answers
     $('#quizPopup #quizAnswers div').removeClass();
     $('#quizPopup #quizAnswers div:even').addClass('ui-block-a');
     $('#quizPopup #quizAnswers div:odd').addClass('ui-block-b');
 
-    // Update the Popup
+    // update
     $('#quizPopup div.ui-content a').css('border-color', '#2ecc71');
     $('#quizPopup div.ui-content a').css('background-color', '#2ecc71');
     $('#quizPopup h1').html(quizName);
@@ -161,8 +131,6 @@ function launch(quizName) {
 
 function winPopup() {
     "use strict";
-    //ion.sound.play("bell_ring");
-    //console.log('You Win');
     setTimeout(function () {
         $('#quizOver h1').html("You Win!");
         $('#quizOver div.ui-content p').html("Congratulations You Win! <br/> You Scored " + score + " Out Of " + total + " Points!");
@@ -173,7 +141,7 @@ function winPopup() {
 function nextQuestion() {
     "use strict";
     if (score != total) {
-        // Load the next question's Data
+        // load next question
         type = quizData[round][0];
         pic = quizData[round][1];
         answerA = quizData[round][2][0];
@@ -184,18 +152,18 @@ function nextQuestion() {
         pic = "css/images/" + pic + ".jpg";
 
         setTimeout(function () {
-            // Shuffle the Answers
+            // shuffle answers
             var $MultipleChoiceAnswers = $('#quizPopup #quizAnswers');
             $('div', $MultipleChoiceAnswers).sort(function () {
                 return (Math.round(Math.random()) - 0.5);
             }).appendTo($MultipleChoiceAnswers);
-            // Format the answers
+            // format answers
             $('#quizPopup #quizAnswers div').removeClass();
             $('#quizPopup #quizAnswers div:even').addClass('ui-block-a');
             $('#quizPopup #quizAnswers div:odd').addClass('ui-block-b');
             $('#quizPopup div.ui-content a').css('border-color', '#2ecc71');
             $('#quizPopup div.ui-content a').css('background-color', '#2ecc71');
-            // Update the Popup
+            // update
             $('#quizPopup div.ui-content p').html(type);
             $('#quizPopup div.ui-content img').attr('src', pic);
             $('#quizPopup div.ui-content a#1').html(answerA);
@@ -211,46 +179,22 @@ function nextQuestion() {
     }
 }
 
-/*
-function updateHighScore() {
-    "use strict";
-    $('#quiz p span span').html(highScore);
-}
-
-function gameOver() {
-    "use strict";
-    console.log('Game Over');
-    setTimeout(function () {
-        $('#quizOver h1').html("Game Over!");
-        $('#quizOver div.ui-content p').html("The Game Is Over. <br/> You Scored " + score + " Out Of " + total + " Points!");
-        $("#quizOver").popup("open");
-    }, 600);
-}
-*/
-
 function submit(current) {
     "use strict";
     /*jslint plusplus: true */
     if (current.id == correctAnswer) {
-        //ion.sound.play("glass");
         $(current).css('background-color', '#0A8536');
         $(current).css('border-color', '#0A520D');
         $("#quizPopup").popup("close");
         round++;
         score += 10;
-        //if (score > highScore) {
-          //  highScore = score;
-        //}
         currentQuestion++;
         nextQuestion();
-        //updateHighScore();
     } else {
-        //ion.sound.play("metal_plate_2");
         $(current).css('background-color', '#800b25');
         $(current).css('border-color', '#b11a3c');
         $("#quizPopup").popup("close");
         nextQuestion();
-        //gameOver();
     }
 }
 
