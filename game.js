@@ -123,7 +123,7 @@ function launch(quizName) {
     for (i = 0; i < quizData.length; i++) {
         IMG = new Image();
         picTemp = quizData[i][1];
-        IMG.src = "css/images/" + picTemp + ".png";
+        IMG.src = "css/images/" + picTemp + ".jpg";
         console.log("Image " + IMG.src + " Loaded");
     }
     // Load the First Question Data
@@ -134,7 +134,7 @@ function launch(quizName) {
     answerC = quizData[round][2][2];
     answerD = quizData[round][2][3];
     correctAnswer = quizData[round][3];
-    pic = "css/images/" + pic + ".png";
+    pic = "css/images/" + pic + ".jpg";
     
     // Shuffle the Answers
     var $MultipleChoiceAnswers = $('#quizPopup #quizAnswers');
@@ -181,7 +181,7 @@ function nextQuestion() {
         answerC = quizData[round][2][2];
         answerD = quizData[round][2][3];
         correctAnswer = quizData[round][3];
-        pic = "css/images/" + pic + ".png";
+        pic = "css/images/" + pic + ".jpg";
 
         setTimeout(function () {
             // Shuffle the Answers
