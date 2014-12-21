@@ -1,22 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css"/>
 <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" />  
 <link rel="icon" type="image/png" href="css/images/apple-icon.png"/>
-<link rel="shortcut icon" sizes="196x196" href="apple-home.png"/>
-<link rel="apple-touch-icon" sizes="144x144" href="apple-home.png"/>
+<link rel="shortcut icon" href="apple-home.png"/>
+<link rel="apple-touch-icon" href="apple-home.png"/>
 <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-
 <script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
-
 <script src="game.js"></script>
-
-<style type="text/css">
-
-<!-- wrapper and iframe for video--> 
+<style type="text/css"> 
 .video-wrapper {
     width: 640px;
 	max-width: 100%;
@@ -46,21 +40,21 @@
     margin: 0 auto !important;
     text-align:center !important;
 }
-.panel-left{
+.panel-left {
     background:#2ecc71 !important;
     padding-right: 0px !important;
 }
-#sideButtons{
+#sideButtons {
     text-shadow:none !important;
     padding: 0 !important;
     float: left !important;
     margin: 0 !important;
     list-style: none !important;
 }
-#sideButtons li{
+#sideButtons li {
     float: left !important;
 }
-#sideButtons li a{
+#sideButtons li a {
     border-right: 1px solid #34495e !important;
     border-bottom: 1px solid #34495e !important;
     background: #2c3e50 !important;
@@ -70,15 +64,15 @@
     font-size: 20px !important;
     color: #bdc3c7 !important;
 }   
-#sidePanel{
+#sidePanel {
     margin: 0;padding: 0 !important;
     list-style: none !important;
 }
-#sidePanel li{
+#sidePanel li {
     padding: 10px 8px !important;
     border-bottom: #2e2e2e 1px solid !important;
 }
-#sidePanel li a{
+#sidePanel li a {
     font-size: 96% !important;
     letter-spacing: 2px !important;
     font-family: 'Noto Sans', sans-serif !important;
@@ -87,21 +81,21 @@
     text-decoration: none !important;
     text-shadow:none !important;
 }
-#sideNav .ui-panel-inner{
+#sideNav .ui-panel-inner {
     position: fixed !important;
     padding: 0px !important;
 }
-#sidePanel li#active{
+#sidePanel li#active {
   background-color: #16a085 !important;
   border-left: 4px solid #34495e !important;
 }
-#sidePanel li#active a, #sidePanel li#active a i{
+#sidePanel li#active a, #sidePanel li#active a i {
     color: #fff !important;
 }
-.clleft{
+.clleft {
     clear: left !important;
 } 
-.intro{
+.intro {
     margin: 30px 0px 20px 0px !important;
     font-weight: 700 !important;
     line-height: 30px !important;
@@ -114,8 +108,6 @@
     width: 100% !important;
     height: 100% !important;
 }
-
-
 #snowflakeContainer {
     position: absolute;
     left: 0px;
@@ -133,395 +125,296 @@
 }
 .snowflake:hover {
     cursor: default;
-}    
-    
+}       
 section figure div {
     position: relative;
     display: inline-block;
     max-width: 100%;
     padding: 0;
 }
-    
 </style>
-
 </head>
-
+    
 <body>
     <div id="snowflakeContainer">
         <p class="snowflake">*</p>
     </div>
-<!----------------------- HOME PAGE ------------------------------------>
-    <div data-role="page" id="home" data-theme="g">
-        
-  
+<!----------------------- HOME PAGE --------------------------------->
+    <div data-role="page" id="home" data-theme="g">   
         <!-- PANEL-->
         <div class="panel-left" data-role="panel" id="panel1" data-position="left">
             <ul id="sidePanel" class="clleft">
-                <li id="active">
-                    <a href="#home">Home</a>
-                </li>
-                <li>
-                    <a href="#" data-transition="slide">About Us</a>
-                </li>
-                <li>
-                    <a href="#learn" data-transition="slide">Learn</a>
-                </li>
-                <li>
-                    <a href="#video" data-transition="slide">Video</a>
-                </li>
-                <li>
-                    <a href="#quiz"  data-transition="slide">Quiz</a>
-                </li>
+                <li id="active"><a href="#home">Home</a></li>
+                <!--li><a href="#" data-transition="slide">About Us</a></li-->
+                <li><a href="#learn" data-transition="slide">Learn</a></li>
+                <li><a href="#video" data-transition="slide">Video</a></li>
+                <li><a href="#quiz"  data-transition="slide">Quiz</a></li>
             </ul>
-        
         </div>
-
-        
         <!-- HEADER -->
         <div data-role="header" data-position="fixed">
             <a data-icon="flat-menu" data-role="button" href="#panel1" data-iconpos="notext" data-corners="false" data-shadow="false" data-theme="g" title=""></a>
-            
             <h1>Mathemapples</h1>
-        </div><!-- /header -->
-        <div data-role="content" class="ui-content ui-width-640">
-            
+        </div>
+        <!-- CONTENT -->
+        <div data-role="content" class="ui-content ui-width-640"> 
             <div class="ui-grid-solo">
                 <h1 class="intro"></h1>  
                 <img src="css/images/front-1.jpg" alt="Front page" width="100%">
             </div>
             <p><strong>HEY Kids! =)</strong></p>
-            
             <p>Math is easy and fun! Lets tackle together every math problem we come across this website. We will start by learning how to add, subtract, multiply, and divide. Ok, you probably already know how to do this. But lets practice it just in case. Click <a href="#learn" data-transition="slide">Here</a> to start learning!</p>
             <p>There is more to addition, subtraction, multiplication, and division than just that. Watch this <a href="#video" data-transition="slide">Video</a> if you want to learn more about the order of operations</p>
             <p>You must be ready and eager to make use of your new skills! Don't wait till later and take this fun math <a href="#quiz" data-transition="slide">Quiz</a>! Good luck!</p>
-            
-            <p></p>
-
-    <p>credits to <a href="http://www.freepik.com/free-photos-vectors/school">Freepik</a> for the images</p>
-        </div><!-- /content -->
-        
+            <p>credits to <a href="http://www.freepik.com/free-photos-vectors/school">Freepik</a> for the images</p>
+        </div>
+        <!-- FOOTER -->
         <div data-role="footer" data-position="fixed">
             <h4>&copy; 2014 Manuel Leung</h4>
-        </div><!-- /footer -->
-    </div><!-- /page -->
-	
-	
-<!---------------- Learn PAGE ----------------------------------------->
-<div data-role="page" id="learn" data-theme="g">
-        
+        </div>
+    </div>
+<!----------------------- LEARN PAGE --------------------------------->
+    <div data-role="page" id="learn" data-theme="g">
         <!-- PANEL -->
         <div class="panel-left" data-role="panel" id="panel2" data-position="left">
             <ul id="sidePanel" class="clleft">
-                <li>
-                    <a href="#home" data-transition="slide">Home</a>
-                </li>
-                <li>
-                    <a href="#" data-transition="slide">About Us</a>
-                </li>
-                <li id="active">
-                    <a href="#learn">Learn</a>
-                </li>
-                <li>
-                    <a href="#video" data-transition="slide">Video</a>
-                </li>
-                <li>
-                    <a href="#quiz"  data-transition="slide">Quiz</a>
-                </li>
+                <li><a href="#home" data-transition="slide">Home</a></li>
+                <!--li><a href="#" data-transition="slide">About Us</a></li-->
+                <li id="active"><a href="#learn">Learn</a></li>
+                <li><a href="#video" data-transition="slide">Video</a></li>
+                <li><a href="#quiz"  data-transition="slide">Quiz</a></li>
             </ul>
-        
         </div>
-
-        
         <!-- HEADER -->
-    <div data-role="header" data-position="fixed">
-        <a data-icon="flat-menu" data-role="button" href="#panel2" data-iconpos="notext" data-corners="false" data-shadow="false" data-theme="g" title=""></a> 
-        <h1>Learn</h1>
-    </div><!-- /header -->
- 
-    <div data-role="content" class="ui-content ui-width-640">
-    
-        <!-- add graphic or something here name-->
-        <p>Choose the topic you want to learn</p>
-        
-		<ul data-role="listview" data-inset="true">
-            <li>
-                <a href="#add" data-transition="slide" class="center">Add</a>
-            </li>
-        </ul>
-        <ul data-role="listview" data-inset="true">
-            <li>
-                <a href="#sub" data-transition="slide" class="center">Subtract</a>
-            </li>
-        </ul>
-        <ul data-role="listview" data-inset="true">
-            <li>
-                <a href="#mult" data-transition="slide" class="center">Multiply</a>
-            </li>
-        </ul>
-        <ul data-role="listview" data-inset="true">
-            <li>
-                <a href="#div" data-transition="slide" class="center">Divide</a>
-            </li>
-        </ul>
-    </div><!-- /content -->
- 
-        
-        
-    <div data-role="footer" data-position="fixed">
-        <h4>&copy; 2014 Manuel Leung</h4>
-    </div><!-- /footer -->
-</div><!-- /page -->
-	
-<!---------------- ADD PAGE ----------------------------------------->
-<div data-role="page" id="add" data-theme="g">
-        
+        <div data-role="header" data-position="fixed">
+            <a data-icon="flat-menu" data-role="button" href="#panel2" data-iconpos="notext" data-corners="false" data-shadow="false" data-theme="g" title=""></a> 
+            <h1>Learn</h1>
+        </div>
+        <!-- CONTENT -->
+        <div data-role="content" class="ui-content ui-width-640">
+            <p>Choose the topic you want to learn</p>
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#add" data-transition="slide" class="center">Add</a></li>
+            </ul>
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#sub" data-transition="slide" class="center">Subtract</a></li>
+            </ul>
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#mult" data-transition="slide" class="center">Multiply</a></li>
+            </ul>
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#div" data-transition="slide" class="center">Divide</a></li>
+            </ul>
+        </div>
+        <!-- FOOTER -->
+        <div data-role="footer" data-position="fixed">
+            <h4>&copy; 2014 Manuel Leung</h4>
+        </div>
+    </div>
+<!----------------------- ADD PAGE --------------------------------->
+    <div data-role="page" id="add" data-theme="g">    
         <!-- HEADER -->
-    <div data-role="header" data-position="fixed">
-         <a class="ui-nodisc-icon" data-icon="carat-l" data-role="button" href="#" data-iconpos="notext" data-corners="false" data-transition="slide" data-rel="back" data-direction="reverse" data-shadow="false" data-theme="g" title="">Back</a> 
-        <h1>Addition</h1>
-    </div><!-- /header -->
- 
-    <div data-role="content" class="ui-content ui-width-640">
-        <h1 style="text-align:center">Addition</h1>
-        <P>Addition is when 2 or more things are put together to make a new total.</P>
-        <p>Here we have 1 apple being added to 1 more apple:</p>
-        <img src="css/images/add-apple-1.png" alt="Add Apple" width="75%">          <p>So, we get 2 apples in total.</p>
-        <p>If we used numbers instead, this is what it would look like</p>
-    <img src="css/images/add-numbers-1.png" alt="Add Numbers" width="75%">
-        <p>To say it in words it is:</p>
-    <img src="css/images/add-words-1.png" alt="Add words" width="75%">
-        <p>What is the total from this addition?</p>
-    <img src="css/images/add-apple-2.png" alt="Add Apple" width="75%">
-        <p>The total for the sum of the apples is: 
-            <div style="width: 80px; height: 30px; background-color: #99cc99;" onmouseover="document.getElementById('div1').style.display = 'block';">
-                <div id="div1" style="font-weight:bold; color:#ffcc00; font-size:24px; display: none; text-align:center; vertical-align:middle;">5</div>
-            </div>
-        </p>
-        <p>Now, what is the total from this other addition?</p>
-    <img src="css/images/add-apple-3.png" alt="Add Apple" width="75%">
-        <p>Yes, the total is also 5. This is because addition is commutative, meaning that the order in which the apples (or numbers) are placed does not matter when adding them together.</p>
-    <img src="css/images/add-words-2.png" alt="Add words" width="75%">
-        
-    </div><!-- /content -->
- 
-        
-        
-    <div data-role="footer" data-position="fixed">
-        <h4>&copy; 2014 Manuel Leung</h4>
-    </div><!-- /footer -->
-</div><!-- /page -->
-
-<!---------------- SUB PAGE ----------------------------------------->
-<div data-role="page" id="sub" data-theme="g">
+        <div data-role="header" data-position="fixed">
+            <a class="ui-nodisc-icon" data-icon="carat-l" data-role="button" href="#" data-iconpos="notext" data-corners="false" data-transition="slide" data-rel="back" data-direction="reverse" data-shadow="false" data-theme="g" title="">Back</a> 
+            <h1>Addition</h1>
+        </div>
+        <!-- CONTENT -->
+        <div data-role="content" class="ui-content ui-width-640">
+            <h1 style="text-align:center">Addition</h1>
+            <p>Addition is when 2 or more things are put together to make a new total.</p>
+            <p>Here we have 1 apple being added to 1 more apple:</p>
+            <img src="css/images/add-apple-1.png" alt="Add Apple" width="75%">
+            <p>So, we get 2 apples in total.</p>
+            <p>If we used numbers instead, this is what it would look like</p>
+            <img src="css/images/add-numbers-1.png" alt="Add Numbers" width="75%">
+            <p>To say it in words it is:</p>
+            <img src="css/images/add-words-1.png" alt="Add words" width="75%">
+            <p>What is the total from this addition?</p>
+            <img src="css/images/add-apple-2.png" alt="Add Apple" width="75%">
+            <p>The total for the sum of the apples is: 
+                <div style="width: 80px; height: 30px; background-color: #99cc99;" onmouseover="document.getElementById('div1').style.display = 'block';">
+                    <div id="div1" style="font-weight:bold; color:#ffcc00; font-size:24px; display: none; text-align:center; vertical-align:middle;">5</div>
+                </div>
+            </p>
+            <p>Now, what is the total from this other addition?</p>
+            <img src="css/images/add-apple-3.png" alt="Add Apple" width="75%">
+            <p>Yes, the total is also 5. This is because addition is commutative, meaning that the order in which the apples (or numbers) are placed does not matter when adding them together.</p>
+            <img src="css/images/add-words-2.png" alt="Add words" width="75%">
+        </div>
+        <!-- FOOTER -->
+        <div data-role="footer" data-position="fixed">
+            <h4>&copy; 2014 Manuel Leung</h4>
+        </div>
+    </div>
+<!----------------------- SUB PAGE --------------------------------->
+    <div data-role="page" id="sub" data-theme="g">
         <!-- HEADER -->
-    <div data-role="header" data-position="fixed">
-        <a class="ui-nodisc-icon" data-icon="carat-l" data-role="button" href="#" data-iconpos="notext" data-corners="false" data-transition="slide" data-rel="back" data-direction="reverse" data-shadow="false" data-theme="g" title="">Back</a> 
-        <h1>Subtraction</h1>
-    </div><!-- /header -->
- 
-    <div data-role="content" class="ui-content ui-width-640">
-        <h1 style="text-align:center">Subtraction</h1>
-        <P>Subtraction is taking one (or more) number away from another to make a new total.</P>
-        <p>Here we have 4 apples subtracted by 2:</p>
-        <img src="css/images/sub-apple-1.png" alt="Sub Apple" width="75%">          <p>So, we are left  with 2 apples in total.</p>
-        <p>If we used numbers instead, this is what it would look like</p>
-    <img src="css/images/sub-numbers-1.png" alt="Sub Numbers" width="75%">
-        <p>To say it in words it is:</p>
-    <img src="css/images/sub-words-1.png" alt="Sub words" width="75%">
-        <p>What is the total from this Subtraction?</p>
-    <img src="css/images/sub-apple-2.png" alt="Sub Apple" width="75%">
-        <p>The total left from the subtraction is: 
-            <div style="width: 80px; height: 30px; background-color: #99cc99;" onmouseover="document.getElementById('div2').style.display = 'block';">
-                <div id="div2" style="font-weight:bold; color:#ffcc00; font-size:24px; display: none; text-align:center; vertical-align:middle;">3</div>
-            </div>
-        </p>
-        <p>Now, what is the total from this other subtraction?</p>
-    <img src="css/images/sub-apple-3.png" alt="Sub Apple" width="75%">
-        <p>The total is -3, because we took away 6 apples when we only had 3 at the start. Unlike addition, the total is not the same as the previous question. This is because subtraction is anticommutative, meaning that changing the order also changes the sign(+/-) of the result.</p>
-    <img src="css/images/sub-words-2.png" alt="Sub words" width="75%">
-        
-    </div><!-- /content -->
- 
-        
-        
-    <div data-role="footer" data-position="fixed">
-        <h4>&copy; 2014 Manuel Leung</h4>
-    </div><!-- /footer -->
-</div><!-- /page -->
-    
-
-<!---------------- MULT PAGE ----------------------------------------->
-<div data-role="page" id="mult" data-theme="g">
+        <div data-role="header" data-position="fixed">
+            <a class="ui-nodisc-icon" data-icon="carat-l" data-role="button" href="#" data-iconpos="notext" data-corners="false" data-transition="slide" data-rel="back" data-direction="reverse" data-shadow="false" data-theme="g" title="">Back</a> 
+            <h1>Subtraction</h1>
+        </div>
+        <!-- CONTENT -->
+        <div data-role="content" class="ui-content ui-width-640">
+            <h1 style="text-align:center">Subtraction</h1>
+            <p>Subtraction is taking one (or more) number away from another to make a new total.</p>
+            <p>Here we have 4 apples subtracted by 2:</p>
+            <img src="css/images/sub-apple-1.png" alt="Sub Apple" width="75%">
+            <p>So, we are left  with 2 apples in total.</p>
+            <p>If we used numbers instead, this is what it would look like</p>
+            <img src="css/images/sub-numbers-1.png" alt="Sub Numbers" width="75%">
+            <p>To say it in words it is:</p>
+            <img src="css/images/sub-words-1.png" alt="Sub words" width="75%">
+            <p>What is the total from this Subtraction?</p>
+            <img src="css/images/sub-apple-2.png" alt="Sub Apple" width="75%">
+            <p>The total left from the subtraction is: 
+                <div style="width: 80px; height: 30px; background-color: #99cc99;" onmouseover="document.getElementById('div2').style.display = 'block';">
+                    <div id="div2" style="font-weight:bold; color:#ffcc00; font-size:24px; display: none; text-align:center; vertical-align:middle;">3</div>
+                </div>
+            </p>
+            <p>Now, what is the total from this other subtraction?</p>
+            <img src="css/images/sub-apple-3.png" alt="Sub Apple" width="75%">
+            <p>The total is -3, because we took away 6 apples when we only had 3 at the start. Unlike addition, the total is not the same as the previous question. This is because subtraction is anticommutative, meaning that changing the order also changes the sign(+/-) of the result.</p>
+            <img src="css/images/sub-words-2.png" alt="Sub words" width="75%">    
+        </div>
+        <!-- FOOTER -->
+        <div data-role="footer" data-position="fixed">
+            <h4>&copy; 2014 Manuel Leung</h4>
+        </div>
+    </div>
+<!----------------------- MULT PAGE --------------------------------->
+    <div data-role="page" id="mult" data-theme="g">
         <!-- HEADER -->
-    <div data-role="header" data-position="fixed">
-        <a class="ui-nodisc-icon" data-icon="carat-l" data-role="button" href="#" data-iconpos="notext" data-corners="false" data-transition="slide" data-rel="back" data-direction="reverse" data-shadow="false" data-theme="g" title="">Back</a> 
-        <h1>Multiply</h1>
-    </div><!-- /header -->
- 
-    <div data-role="content" class="ui-content ui-width-640">
-        <h1 style="text-align:center">Multiply</h1>
-        <P>Multiplication is taking one number and adding the same number to itself by a certain number of times.</P>
-        <p>The best, fastest, and easiest way to learn to multiply is to memorize the multiplication table!</p>
-    <img src="css/images/mult-table.png" alt="Mult Table" width="95%">
-        <p>Here we have 1 apple multiplied by 3:</p>
-        <img src="css/images/mult-apple-1.png" alt="Mult Apple" width="75%">
-        <p>So, we get 3 apples in total.</p>
-        <p>If we used numbers instead, this is what it would look like</p>
-    <img src="css/images/mult-numbers-1.png" alt="Mult Numbers" width="75%">
-        <p>To say it in words it is:</p>
-    <img src="css/images/mult-words-1.png" alt="Mult words" width="75%">
-        <p>What is the total from this Multiplication?</p>
-    <img src="css/images/mult-apple-2.png" alt="Mult Apple" width="75%">
-        <p>The total from this multiplication is: 
-            <div style="width: 80px; height: 30px; background-color: #99cc99;" onmouseover="document.getElementById('div3').style.display = 'block';">
-                <div id="div3" style="font-weight:bold; color:#ffcc00; font-size:24px; display: none; text-align:center; vertical-align:middle;">6</div>
-            </div>
-        </p>
-        <p>Now, what is the total from this other Multiplication?</p>
-    <img src="css/images/mult-apple-3.png" alt="Mult Apple" width="75%">
-        <p>Yes, the total is also 6. Multiplication is also commutative like addition, so the order does not matter and give us the same result.</p>
-    <img src="css/images/mult-words-2.png" alt="Mult words" width="75%">
-        
-    </div><!-- /content -->
- 
-        
-        
-    <div data-role="footer" data-position="fixed">
-        <h4>&copy; 2014 Manuel Leung</h4>
-    </div><!-- /footer -->
-</div><!-- /page -->
-
-<!---------------- DIVISION PAGE ---------------------------------------->
-<div data-role="page" id="div" data-theme="g">
+        <div data-role="header" data-position="fixed">
+            <a class="ui-nodisc-icon" data-icon="carat-l" data-role="button" href="#" data-iconpos="notext" data-corners="false" data-transition="slide" data-rel="back" data-direction="reverse" data-shadow="false" data-theme="g" title="">Back</a> 
+            <h1>Multiply</h1>
+        </div>
+        <!-- CONTENT -->
+        <div data-role="content" class="ui-content ui-width-640">
+            <h1 style="text-align:center">Multiply</h1>
+            <p>Multiplication is taking one number and adding the same number to itself by a certain number of times.</p>
+            <p>The best, fastest, and easiest way to learn to multiply is to memorize the multiplication table!</p>
+            <img src="css/images/mult-table.png" alt="Mult Table" width="95%">
+            <p>Here we have 1 apple multiplied by 3:</p>
+            <img src="css/images/mult-apple-1.png" alt="Mult Apple" width="75%">
+            <p>So, we get 3 apples in total.</p>
+            <p>If we used numbers instead, this is what it would look like</p>
+            <img src="css/images/mult-numbers-1.png" alt="Mult Numbers" width="75%">
+            <p>To say it in words it is:</p>
+            <img src="css/images/mult-words-1.png" alt="Mult words" width="75%">
+            <p>What is the total from this Multiplication?</p>
+            <img src="css/images/mult-apple-2.png" alt="Mult Apple" width="75%">
+            <p>The total from this multiplication is: 
+                <div style="width: 80px; height: 30px; background-color: #99cc99;" onmouseover="document.getElementById('div3').style.display = 'block';">
+                    <div id="div3" style="font-weight:bold; color:#ffcc00; font-size:24px; display: none; text-align:center; vertical-align:middle;">6</div>
+                </div>
+            </p>
+            <p>Now, what is the total from this other Multiplication?</p>
+            <img src="css/images/mult-apple-3.png" alt="Mult Apple" width="75%">
+            <p>Yes, the total is also 6. Multiplication is also commutative like addition, so the order does not matter and give us the same result.</p>
+            <img src="css/images/mult-words-2.png" alt="Mult words" width="75%">    
+        </div>
+        <!-- FOOTER -->
+        <div data-role="footer" data-position="fixed">
+            <h4>&copy; 2014 Manuel Leung</h4>
+        </div>
+    </div>
+<!----------------------- DIV PAGE --------------------------------->
+    <div data-role="page" id="div" data-theme="g">
         <!-- HEADER -->
-    <div data-role="header" data-position="fixed">
-        <a class="ui-nodisc-icon" data-icon="carat-l" data-role="button" href="#" data-iconpos="notext" data-corners="false" data-transition="slide" data-rel="back" data-direction="reverse" data-shadow="false" data-theme="g" title="">Back</a> 
-        <h1>Division</h1>
-    </div><!-- /header -->
- 
-    <div data-role="content" class="ui-content ui-width-640">
-        <h1 style="text-align:center">Division</h1>
-        <p>Division is to separate a number into equal parts.</p>
-        <p>by dividing we can find out how many of a number is in another number. This is also the opposite of multiplying!</p>
-        <p>Here we have 8 apples divided by 2:</p>
-        <img src="css/images/div-apple-1.png" alt="Div Apple" width="75%">
-        <p>The answer is 4. Because 4 parts of 2 each give us 8</p>
-        <p>If we used numbers instead, this is what it would look like</p>
-    <img src="css/images/div-numbers-1.png" alt="Div Numbers" width="75%">
-        <p>To say it in words it is:</p>
-    <img src="css/images/div-words-1.png" alt="Div words" width="75%">
-        <p>What is the total from this Division?</p>
-    <img src="css/images/div-apple-2.png" alt="Div Apple" width="75%">
-        <p>The total from this Division is: 
-            <div style="width: 80px; height: 30px; background-color: #99cc99;" onmouseover="document.getElementById('div4').style.display = 'block';">
-                <div id="div4" style="font-weight:bold; color:#ffcc00; font-size:24px; display: none; text-align:center; vertical-align:middle;">2</div>
-            </div>
-        </p>
-        <p>Now, what is the total from this other Division?</p>
-    <img src="css/images/div-apple-3.png" alt="Div Apple" width="75%">
-        <p>The answer is 1 remainder 2 (or 1.5). This is because division is not always perfect, sometimes you cannot separate things or numbers into equal parts so you are left with a remainder of the items after separating as much as you are able to.</p>
-    <img src="css/images/div-words-2.png" alt="Mult words" width="75%">
-    
-    </div><!-- /content -->    
-        
-    <div data-role="footer" data-position="fixed">
-        <h4>&copy; 2014 Manuel Leung</h4>
-    </div><!-- /footer -->
-</div><!-- /page -->
-
-<!------------------------- Video PAGE --------------------------------->
+        <div data-role="header" data-position="fixed">
+            <a class="ui-nodisc-icon" data-icon="carat-l" data-role="button" href="#" data-iconpos="notext" data-corners="false" data-transition="slide" data-rel="back" data-direction="reverse" data-shadow="false" data-theme="g" title="">Back</a> 
+            <h1>Division</h1>
+        </div>
+        <!-- CONTENT -->
+        <div data-role="content" class="ui-content ui-width-640">
+            <h1 style="text-align:center">Division</h1>
+            <p>Division is to separate a number into equal parts.</p>
+            <p>by dividing we can find out how many of a number is in another number. This is also the opposite of multiplying!</p>
+            <p>Here we have 8 apples divided by 2:</p>
+            <img src="css/images/div-apple-1.png" alt="Div Apple" width="75%">
+            <p>The answer is 4. Because 4 parts of 2 each give us 8</p>
+            <p>If we used numbers instead, this is what it would look like</p>
+            <img src="css/images/div-numbers-1.png" alt="Div Numbers" width="75%">
+            <p>To say it in words it is:</p>
+            <img src="css/images/div-words-1.png" alt="Div words" width="75%">
+            <p>What is the total from this Division?</p>
+            <img src="css/images/div-apple-2.png" alt="Div Apple" width="75%">
+            <p>The total from this Division is: 
+                <div style="width: 80px; height: 30px; background-color: #99cc99;" onmouseover="document.getElementById('div4').style.display = 'block';">
+                    <div id="div4" style="font-weight:bold; color:#ffcc00; font-size:24px; display: none; text-align:center; vertical-align:middle;">2</div>
+                </div>
+            </p>
+            <p>Now, what is the total from this other Division?</p>
+            <img src="css/images/div-apple-3.png" alt="Div Apple" width="75%">
+            <p>The answer is 1 remainder 2 (or 1.5). This is because division is not always perfect, sometimes you cannot separate things or numbers into equal parts so you are left with a remainder of the items after separating as much as you are able to.</p>
+            <img src="css/images/div-words-2.png" alt="Mult words" width="75%">
+        </div>    
+        <!-- FOOTER -->
+        <div data-role="footer" data-position="fixed">
+            <h4>&copy; 2014 Manuel Leung</h4>
+        </div>
+    </div>
+<!----------------------- VIDEO PAGE --------------------------------->
 	<div data-role="page" id="video" data-theme="g">
-        
         <!-- PANEL -->
         <div class="panel-left" data-role="panel" id="panel3" data-position="left">
             <ul id="sidePanel" class="clleft">
-                <li>
-                    <a href="#home" data-transition="slide">Home</a>
-                </li>
-                <li>
-                    <a href="#" data-transition="slide">About Us</a>
-                </li>
-                <li>
-                    <a href="#learn" data-transition="slide">Learn</a>
-                </li>
-                <li id="active">
-                    <a href="#video">Video</a>
-                </li>
-                <li>
-                    <a href="#quiz" data-transition="slide">Quiz</a>
-                </li>
+                <li><a href="#home" data-transition="slide">Home</a></li>
+                <!--li><a href="#" data-transition="slide">About Us</a></li-->
+                <li><a href="#learn" data-transition="slide">Learn</a></li>
+                <li id="active"><a href="#video">Video</a></li>
+                <li><a href="#quiz" data-transition="slide">Quiz</a></li>
             </ul>
-        
         </div>       
-        
+        <!-- HEADER -->
 		<div data-role="header" data-position="fixed">
 			<h1>Video</h1>
-             <a data-icon="flat-menu" data-role="button" href="#panel3" data-iconpos="notext" data-corners="false" data-shadow="false" data-theme="g" title=""></a> 
+            <a data-icon="flat-menu" data-role="button" href="#panel3" data-iconpos="notext" data-corners="false" data-shadow="false" data-theme="g" title=""></a> 
 		</div>
-        
+        <!-- CONTENT -->
 		<div data-role="content" class="ui-content ui-width-640" style="margin-top:20px;">
-            
-            
-           <div class="video-wrapper">
-	           <div class="video-container">
-		          <iframe width="640" height="360" src="http://www.youtube.com/embed/N0_TWQTrJ-k" frameborder="0" allowfullscreen></iframe> 
-               </div><!-- /video -->
-            </div><!-- /video-wrapper -->
-            
+            <div class="video-wrapper">
+                <div class="video-container">
+                    <iframe width="640" height="360" src="http://www.youtube.com/embed/N0_TWQTrJ-k" frameborder="0" allowfullscreen></iframe> 
+               </div>
+            </div>
             <div>
                 <p><strong>Disclaimer</strong>: I do not own the video. All rights belong to <a href="http://www.youtube.com/user/KidsEduc">Kids Educational Games</a> subscribe to them for more</p>
             </div>
-            
 		</div>
-	
+        <!-- FOOTER -->
 		<div data-role="footer" data-position="fixed">
 			<h4>&copy; 2014 Manuel Leung</h4>
 		</div>
-	</div>
-
-	
-<!-------------------- QUIZ PAGE -------------------------------------->
+    </div>
+<!----------------------- QUIZ PAGE --------------------------------->
 	<div data-role="page" id="quiz" data-theme="g">
         <!-- PANEL -->
         <div class="panel-left" data-role="panel" id="panel4" data-position="left">
             <ul id="sidePanel" class="clleft">
-                <li>
-                    <a href="#home" data-transition="slide">Home</a>
-                </li>
-                <li>
-                    <a href="#" data-transition="slide">About Us</a>
-                </li>
-                <li>
-                    <a href="#learn" data-transition="slide">Learn</a>
-                </li>
-                <li>
-                    <a href="#video" data-transition="slide">Video</a>
-                </li>
-                <li id="active">
-                    <a href="#quiz">Quiz</a>
-                </li>
+                <li><a href="#home" data-transition="slide">Home</a></li>
+                <!--li><a href="#" data-transition="slide">About Us</a></li-->
+                <li><a href="#learn" data-transition="slide">Learn</a></li>
+                <li><a href="#video" data-transition="slide">Video</a></li>
+                <li id="active"><a href="#quiz">Quiz</a></li>
             </ul>
         </div> 
-        
+        <!-- HEADER -->
 		<div data-role="header" data-position="fixed">
 			<h1>Quiz</h1>
-             <a data-icon="flat-menu" data-role="button" href="#panel4" data-iconpos="notext" data-corners="false" data-shadow="false" data-theme="g" title=""></a> 
+            <a data-icon="flat-menu" data-role="button" href="#panel4" data-iconpos="notext" data-corners="false" data-shadow="false" data-theme="g" title=""></a> 
 		</div>
-		
+		<!-- CONTENT -->
 		<div data-role="content" class="ui-content ui-width-640" style="margin-top:20px;">
-            
             <ul data-role="listview" data-inset="true">
-                <li>
-                    <a id="MathQuiz" onclick="launch(this.id)">Start Quiz</a>
-                </li>
+                <li><a id="MathQuiz" onclick="launch(this.id)">Start Quiz</a></li>
             </ul>
 		</div>
-	
+        <!-- FOOTER -->
 		<div data-role="footer" data-position="fixed">
 			<h4>&copy; 2014 Manuel Leung</h4>
-		</div>
-        
-        <!-- Popup -->
+		</div>        
+        <!-- POPUP -->
         <div data-role="popup" id="quizPopup" data-overlay-theme="g" data-dismissible="false" style="min-width:250px" data-transition="fade">
             <div data-role="header"><a href="#" data-rel="back" data-icon="flat-cross" data-shadow="false" data-corners="false" data-iconpos="notext" data-theme="g" data-inline="true" class="ui-btn-right" >Close</a>
                 <h1></h1>
@@ -529,22 +422,16 @@ section figure div {
             <div role="home" class="ui-content">
                 <p class="center"></p>
                 <br />
-                <div class="center"><img width="240" height="165" style="border:2px solid #5E7975; border-radius:15px; -moz-border-radius:15px; -khtml-border-radius:15px; -webkit-border-radius:15px;" />
-                </div>
+                <div class="center"><img width="240" height="165" style="border:2px solid #5E7975; border-radius:15px; -moz-border-radius:15px; -khtml-border-radius:15px; -webkit-border-radius:15px;" /></div>
                 <div class="ui-grid-a ui-mini" id="quizAnswers">
-                    <div><a id="1" onclick="submit(this)" class="ui-btn ui-corner-all ui-shadow">A</a>
-                    </div>
-                    <div><a id="2" onclick="submit(this)" class="ui-btn ui-corner-all ui-shadow">B</a>
-                    </div>
-                    <div><a id="3" onclick="submit(this)" class="ui-btn ui-corner-all ui-shadow">C</a>
-                    </div>
-                    <div><a id="4" onclick="submit(this)" class="ui-btn ui-corner-all ui-shadow">D</a>
-                    </div>
+                    <div><a id="1" onclick="submit(this)" class="ui-btn ui-corner-all ui-shadow">A</a></div>
+                    <div><a id="2" onclick="submit(this)" class="ui-btn ui-corner-all ui-shadow">B</a></div>
+                    <div><a id="3" onclick="submit(this)" class="ui-btn ui-corner-all ui-shadow">C</a></div>
+                    <div><a id="4" onclick="submit(this)" class="ui-btn ui-corner-all ui-shadow">D</a></div>
                 </div>
             </div>
         </div>
-        
-        <!-- Gameover -->
+        <!-- GAMEOVER -->
         <div data-role="popup" id="quizOver" data-dismissible="false" style="min-width:250px;" data-transition="flow" data-theme="g">
             <div data-role="header">
                 <h1></h1>
@@ -558,8 +445,7 @@ section figure div {
             </div>
         </div>
 	</div>
-        
-       <script src="fallingsnow_v6.js"></script>
-<!-- end of body -->
+<!----------------------- END PAGES --------------------------------->
+<script src="fallingsnow_v6.js"></script>
 </body>
 </html>
